@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Job = require('../models/jobs');
 
-mongoose.connect('mongodb+srv://Root:12345@cluster0.x79bt9w.mongodb.net/', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
